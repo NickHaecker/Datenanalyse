@@ -15,5 +15,4 @@ export function GetAverage() {
 
 
 const average = GetAverage()
-// console.log("Total", total)
 console.log("Average",average)
