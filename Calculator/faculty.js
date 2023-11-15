@@ -29,6 +29,8 @@ function reduceFraction(numerator, denominator) {
     const commonFactor = gcd(numerator, denominator);
     return [numerator / commonFactor, denominator / commonFactor];
 }
+let probability = 0
+
 
 const n = 120
 // const k = 20
