@@ -31,17 +31,26 @@ function reduceFraction(numerator, denominator) {
 }
 let probability = 0
 
-
-const n = 120
+const probs = []
+const n = 5000
 // const k = 20
 const p = 1 / 2
 
-let probability = 0
-for ( let k = 1; k <= 120;k++){
-    probability = probability + (k * bernoulliProbability( n, k, p ));
+// bestimmung von erwartungswert
+// for ( let k = 2495; k <= 2505;k++){
+//     console.log(k)
+//     probability = probability + (k * bernoulliProbability( n, k, p ));
+// }
+
+for (let i = 0; i <= 5000; i++) {
+    console.log(i)
+    probs.push(bernoulliProbability(n, i, p))
 }
+
+console.log(probs.length)
+console.log(probs)
 
 // const [reducedNumerator, reducedDenominator] = reduceFraction(probability * 100, 100);
 
 // console.log(`Die Wahrscheinlichkeit für genau ${k} Erfolge in ${n} Versuchen als Bruch: ${reducedNumerator}/${reducedDenominator}`);
-console.log(` ${probability }`);
+// console.log(` ${probability}`);
